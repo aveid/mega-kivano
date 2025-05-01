@@ -9,7 +9,7 @@ class Item(CommonInfo):
     article = models.CharField(max_length=100, blank=True, null=True)
     count = models.PositiveIntegerField(default=0)
     sub_category = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
-
+    link = models.CharField(null=True, blank=True)
     class Meta:
         db_table = 'item_tb'
         verbose_name_plural = "Товары"

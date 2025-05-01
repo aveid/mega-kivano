@@ -9,6 +9,8 @@ psycopg2 = "*"
 pillow = "*"
 djangorestframework = "*"
 django-environ = "*"
+requests = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 

@@ -23,7 +23,7 @@ class Category(CommonInfo):
 class SubCategory(CommonInfo):
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE,
-        related_name='sub_categories'
+        related_name='sub_categories', null=True
     )
 
     class Meta:

@@ -1,21 +1,21 @@
-from rest_framework.generics import (ListAPIView,
-                                     RetrieveAPIView,
-                                     CreateAPIView)
+from rest_framework import generics
 
 from category.models import Category
 from category.serializers import CategorySerializer
 
 
-class CategoryListAPIView(ListAPIView):
+class CategoryListAPIView(generics.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
 
-class CategoryDetailAPIView(RetrieveAPIView):
+class CategoryDetailAPIView(generics.RetrieveAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
 
-class CategoryCreateAPIView(CreateAPIView):
+class CategoryCreateAPIView(generics.CreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+
