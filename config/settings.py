@@ -37,6 +37,7 @@ INSTALLED_APPS = [
 
     "category",
     "announcement",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -50,7 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "config.urls"
-
+AUTH_USER_MODEL = "users.CustomUser"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",

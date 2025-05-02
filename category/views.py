@@ -12,6 +12,7 @@ class CategoryListAPIView(generics.ListAPIView):
 class CategoryDetailAPIView(generics.RetrieveAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    lookup_field = "title"
 
 
 class CategoryCreateAPIView(generics.CreateAPIView):
